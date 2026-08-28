@@ -4,7 +4,7 @@ This repository contains the public code framework for a weakly supervised, sing
 
 The framework was developed to analyze leukemia-derived blood/PBMC WGS when matched normal, remission, parental, fibroblast, or sorted-cell DNA is unavailable. It integrates variant-level evidence, allele-fraction structure, structural-variant proximity, biological annotation, and unrelated non-cancer control-background features to generate an interpretable, confidence-aware candidate map.
 
-> **Manuscript status:** original research article in preparation/review.  
+
 > **Important:** this repository does **not** contain controlled-access genomic data, patient-level clinical data, BAM/CRAM files, VCF files, or patient-level prediction outputs.
 
 ## Study overview
@@ -39,7 +39,7 @@ The workflow supports:
 │   ├── 03_compare_model_versions.py
 │   ├── 04_unknown_candidate_prioritization.py
 │   ├── 05_external_all_catalog_concordance.py
-│   └── 06_make_publication_figures.py
+
 ├── docs/
 │   ├── data_privacy_and_availability.md
 │   ├── method_overview.md
@@ -48,17 +48,7 @@ The workflow supports:
     └── README.md
 ```
 
-## Recommended public figures
 
-The following figures are appropriate to include in the repository **only if they contain aggregate results and no patient identifiers**:
-
-1. Study workflow / graphical abstract.
-2. Model architecture and evidence layers.
-3. Model-version comparison and evidence-layer ablation.
-4. Unknown-candidate discovery summary.
-5. External pediatric ALL catalog concordance and robustness benchmarking.
-
-Do **not** upload raw patient-level prediction tables, clinical metadata files, sample IDs, VCF/BAM/CRAM files, or controlled-access data.
 
 ## Minimal installation
 
@@ -80,7 +70,6 @@ python scripts/02_train_multitask_deconvolution_model.py --config config/example
 python scripts/03_compare_model_versions.py --config config/example_config.yaml
 python scripts/04_unknown_candidate_prioritization.py --config config/example_config.yaml
 python scripts/05_external_all_catalog_concordance.py --config config/example_config.yaml
-python scripts/06_make_publication_figures.py --config config/example_config.yaml
 ```
 
 ## Data availability
@@ -89,10 +78,7 @@ This repository provides code and documentation only. The pediatric leukemia WGS
 
 ## How to cite
 
-If you use this code or adapt the framework, please cite the associated manuscript once available:
-
-> Palizban F. et al. Weakly supervised single-sample whole-genome deconvolution for candidate variant discovery and biomarker prioritization in pediatric leukemia. Manuscript in preparation.
 
 ## Contact
 
-For questions about the framework, please contact the corresponding author listed in the manuscript.
+email: palizbanf@chop.edu
