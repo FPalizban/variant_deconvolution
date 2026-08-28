@@ -2,9 +2,6 @@
 """
 Build weak-label feature matrix
 
-This is a publication-safe scaffold script. Replace placeholder functions with the
-project-specific implementation before release, and do not hard-code private paths
-or patient identifiers.
 """
 
 from __future__ import annotations
