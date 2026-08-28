@@ -1,0 +1,32 @@
+project:
+  name: leukemia_single_sample_wgs_deconvolution
+  genome_build: GRCh38
+
+inputs:
+  # Replace these paths with authorized local paths.
+  freebayes_vcf_dir: /path/to/freebayes_vcfs
+  manta_sv_vcf_dir: /path/to/manta_sv_vcfs
+  gencode_gtf: /path/to/gencode.gtf
+  clinvar_vcf: /path/to/clinvar.vcf.gz
+
+controls:
+  # Unrelated non-cancer controls are used only for background normalization.
+  use_control_background: true
+  control_feature_table: /path/to/control_background_features.tsv.gz
+
+outputs:
+  outdir: results/public_example_output
+
+model:
+  random_seed: 42
+  test_fraction: 0.30
+  hidden_dim: 384
+  embedding_dim: 16
+  batch_size: 1024
+  max_epochs: 60
+  learning_rate: 0.001
+  weight_decay: 0.0001
+
+privacy:
+  remove_sample_ids_from_public_outputs: true
+  export_aggregate_tables_only: true
